@@ -111,7 +111,7 @@ const Wrapper = styled.div`
   }
 `
 
-const SideBarInner = styled(Box)<{ bg: string }>`
+const SideBarInner = styled(Box) <{ bg: string }>`
   position: fixed;
   height: 100%;
   width: ${props => props.theme.sidebarWidth.big};
@@ -136,7 +136,7 @@ const SideBarInner = styled(Box)<{ bg: string }>`
   }
 `
 
-const Nav = styled(Flex)<{ color: string }>`
+const Nav = styled(Flex) <{ color: string }>`
   a {
     text-decoration: none;
     color: ${props => readableColor(`${props.color}`)};
@@ -250,12 +250,12 @@ const Layout = ({ children, color }: LayoutProps) => {
             </Flex>
           </SideBarInner>
           <Main>{children}</Main>
-          <Footer color={color}>
+          {/* <Footer color={color}>
             <Box p={[6, 6, 8]} fontSize={0}>
               Starter by <a href="https://www.lekoarts.de/en">LekoArts</a>.<br />
               <a href="https://github.com/LekoArts/gatsby-starter-portfolio-jodie">Source</a>.
             </Box>
-          </Footer>
+          </Footer> */}
         </Wrapper>
       </>
     </ThemeProvider>
