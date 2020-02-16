@@ -1,11 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import { transparentize, readableColor } from 'polished'
 import styled from 'styled-components'
 import { config, useSpring, animated } from 'react-spring'
 import Layout from '../components/layout'
-import { Box, AnimatedBox, Button } from '../elements'
+import { Box, AnimatedBox } from '../elements'
 import SEO from '../components/SEO'
 
 const PBox = styled(AnimatedBox)`
@@ -15,6 +14,7 @@ const PBox = styled(AnimatedBox)`
 
 const Content = styled(Box) <{ bg: string }>`
   background-color: #FFF;
+  padding-bottom: 4rem;
   .gatsby-image-wrapper:not(:last-child) {
     margin-bottom: ${props => props.theme.space[10]};
 
@@ -36,11 +36,6 @@ const Description = styled(animated.div)`
   --baseline-multiplier: 0.179;
   --x-height-multiplier: 0.35;
   line-height: 1.58;
-`
-
-const PButton = styled(Button) <{ color: string }>`
-  background: ${props => (props.color === 'white' ? 'black' : props.color)};
-  color: ${props => readableColor(props.color === 'white' ? 'black' : props.color)};
 `
 
 type PageProps = {
@@ -111,7 +106,7 @@ const Project: React.FunctionComponent<PageProps> = ({ data: { project, images }
           <div dangerouslySetInnerHTML={{ __html: project.desc }} />
         </Description>
       </PBox>
-      <Content bg={project.color} py={10}>
+      <Content bg={project.color} py={0}>
         <PBox style={imagesAnimation} px={[6, 6, 8, 10]}>
           {images.nodes.filter(image => !image.name.includes("thumb")).map(image => (
             <Img alt={image.name} key={image.childImageSharp.fluid.src} fluid={image.childImageSharp.fluid} />
