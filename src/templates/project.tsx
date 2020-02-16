@@ -13,7 +13,7 @@ const PBox = styled(AnimatedBox)`
   margin: 0 auto;
 `
 
-const Content = styled(Box)<{ bg: string }>`
+const Content = styled(Box) <{ bg: string }>`
   background-color: ${props => transparentize(0.9, props.bg)};
 
   .gatsby-image-wrapper:not(:last-child) {
@@ -39,7 +39,7 @@ const Description = styled(animated.div)`
   line-height: 1.58;
 `
 
-const PButton = styled(Button)<{ color: string }>`
+const PButton = styled(Button) <{ color: string }>`
   background: ${props => (props.color === 'white' ? 'black' : props.color)};
   color: ${props => readableColor(props.color === 'white' ? 'black' : props.color)};
 `
@@ -114,17 +114,11 @@ const Project: React.FunctionComponent<PageProps> = ({ data: { project, images }
       </PBox>
       <Content bg={project.color} py={10}>
         <PBox style={imagesAnimation} px={[6, 6, 8, 10]}>
-          {images.nodes.map(image => (
+          {images.nodes.filter(image => !image.name.includes("thumb")).map(image => (
             <Img alt={image.name} key={image.childImageSharp.fluid.src} fluid={image.childImageSharp.fluid} />
           ))}
         </PBox>
       </Content>
-      <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
-        <h2>Want to start your own project?</h2>
-        <PButton color={project.color} py={4} px={8}>
-          Contact Us
-        </PButton>
-      </PBox>
     </Layout>
   )
 }

@@ -123,6 +123,10 @@ const Index: React.FunctionComponent<PageProps> = ({ data: { firstProject, three
             </GridItem>
           ))}
         </ThreeProjects>
+        <FirstProject to={firstProject.slug} aria-label={`View project "${firstProject.title}"`}>
+          <Img fluid={firstProject.cover.childImageSharp.fluid} />
+          <span>{firstProject.title}</span>
+        </FirstProject>
         <Instagram to="/instagram" aria-label="See my Instagram pictures">
           <Img fluid={instagram.childImageSharp.fluid} />
           <span>Instagram</span>
