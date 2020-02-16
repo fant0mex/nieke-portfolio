@@ -104,7 +104,7 @@ const Index: React.FunctionComponent<PageProps> = ({ data: { firstProject, three
   })
 
   return (
-    <Layout>
+    <Layout color="#29313f">
       <SEO />
       <Area style={pageAnimation}>
         <FirstProject to={firstProject.slug} aria-label={`View project "${firstProject.title}"`}>

@@ -145,7 +145,7 @@ const Nav = styled(Flex) <{ color: string }>`
     &:hover,
     &:focus,
     &.navlink-active {
-      color: ${props => props.theme.colors.primary};
+      color: #0083A5;
     }
 
     @media (max-width: ${props => props.theme.breakpoints[2]}) {

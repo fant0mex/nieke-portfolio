@@ -135,7 +135,7 @@ const Instagram: React.FunctionComponent<Props> = ({
   })
 
   return (
-    <Layout color="#3F4F67">
+    <Layout color="#29313f">
       <SEO title="Instagram | Nieke Tebeest" />
       <Grid style={pageAnimation}>
         {trail.map((style, index) => {
