@@ -8,7 +8,7 @@ module.exports = {
   siteUrl: 'http://nieketebeest.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/logos/logo.png', // Used for SEO and manifest
-  siteDescription: 'Image-heavy photography portfolio with colorful accents & great typography',
+  siteDescription: 'Nieke Tebeest - Digital & Production Desiger',
   author: 'Nieke Tebeest', // Author for schema.org JSONLD
   ogSiteName: 'nieketebeest', // Facebook Site Name
   ogLanguage: 'en_US', // og:language
