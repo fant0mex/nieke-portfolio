@@ -4,8 +4,6 @@ import Img from 'gatsby-image'
 
 const Logo = () => {
   const data = useStaticQuery(query);
-  console.log({ data });
-
   return (
     <Img fluid={data.logo.childImageSharp.fluid} />
   )
