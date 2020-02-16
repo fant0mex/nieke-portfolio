@@ -15,7 +15,7 @@ const GlobalStyles = createGlobalStyle`
   }
   ::selection {
     color: white;
-    background-color: #f6993f;
+    background-color: #0083A5;
   }
   html {
     box-sizing: border-box;
@@ -83,7 +83,7 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: underline;
     &:hover,
     &:focus {
-      color: ${theme.colors.primary};
+      color: #0083A5;
     }
   }
   
@@ -184,7 +184,7 @@ const Footer = styled.footer<{ color: string }>`
     color: ${props => readableColor(`${props.color}`)};
     text-decoration: none;
     &:hover {
-      color: ${props => props.theme.colors.primary};
+      color: #0083A5;
     }
   }
 
