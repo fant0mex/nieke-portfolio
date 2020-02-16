@@ -171,33 +171,6 @@ const Main = styled.main`
   }
 `
 
-const Footer = styled.footer<{ color: string }>`
-  position: fixed;
-  width: ${props => props.theme.sidebarWidth.big};
-  bottom: 0;
-
-  background: ${props => props.color};
-
-  color: ${props => readableColor(`${props.color}`, `${props.theme.colors.grey}`, '#c3c3c3')};
-
-  a {
-    color: ${props => readableColor(`${props.color}`)};
-    text-decoration: none;
-    &:hover {
-      color: #0083A5;
-    }
-  }
-
-  @media (max-width: ${props => props.theme.breakpoints[4]}) {
-    width: ${props => props.theme.sidebarWidth.normal};
-  }
-
-  @media (max-width: ${props => props.theme.breakpoints[2]}) {
-    position: relative;
-    width: 100%;
-  }
-`
-
 type LayoutProps = { children: React.ReactNode } & typeof defaultProps
 
 const defaultProps = {

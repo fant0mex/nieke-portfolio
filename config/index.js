@@ -3,17 +3,14 @@ module.exports = {
 
   siteTitle: 'Nieke Tebeest', // Navigation and Site Title
   siteTitleAlt: 'Nieke Tebeest - Digital & Production Desiger', // Alternative Site title for SEO
-  siteTitleShort: 'Jodie', // short_name for manifest
-  siteHeadline: 'Come & Enjoy our excellent photos', // Headline for schema.org JSONLD
-  siteUrl: 'https://jodie.lekoarts.de', // Domain of your site. No trailing slash!
+  siteTitleShort: 'Nieke', // short_name for manifest
+  siteHeadline: 'Nieke Tebeest Portfolio', // Headline for schema.org JSONLD
+  siteUrl: 'https://nieketebeest.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/logos/logo.png', // Used for SEO and manifest
   siteDescription: 'Image-heavy photography portfolio with colorful accents & great typography',
-  author: 'LekoArts', // Author for schema.org JSONLD
-
-  // siteFBAppID: '123456789', // Facebook App ID - Optional
-  userTwitter: '@jodie', // Twitter Username
-  ogSiteName: 'jodie', // Facebook Site Name
+  author: 'Nieke Tebeest', // Author for schema.org JSONLD
+  ogSiteName: 'nieketebeest', // Facebook Site Name
   ogLanguage: 'en_US', // og:language
   googleAnalyticsID: 'UA-XXXXXX-X',
 
