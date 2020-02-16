@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 import Facebook from './facebook'
+import Twitter from './twitter'
 
 type Props = {} & typeof defaultProps
 
@@ -32,6 +33,7 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
       ogLanguage,
       author,
       facebook,
+      twitter
     },
   } = site
 
@@ -196,6 +198,7 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
         locale={ogLanguage}
         name={facebook}
       />
+      <Twitter title={seo.title} image={seo.image} desc={seo.description} username={twitter} />
     </>
   )
 }
@@ -218,6 +221,7 @@ const query = graphql`
         ogLanguage
         author
         facebook
+        twitter
       }
     }
   }
